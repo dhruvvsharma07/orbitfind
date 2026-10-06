@@ -1,7 +1,28 @@
-# OrbitFind
+# OrbitFind — Part 3
 
-OrbitFind is a visual-search app that lets users enter a topic and discover a responsive wall of images from the Wikimedia Commons API. Part 2 connects the search form to the API, fetches real image data, and renders image cards into the existing responsive grid. I kept the warm cream-and-orange editorial design from Part 1 and added working quick-pick chips so common topics can be searched in one click. Each image card also links to the full Wikimedia image in a new tab.
+OrbitFind is a custom image-search app built with plain HTML, CSS, and JavaScript.
 
-## Part 2 — Fetch & Render
+## Part 3 additions
+- Loading indicator while Wikimedia Commons data is being fetched
+- Friendly empty-result state
+- Friendly network/API error state using try...catch
+- response.ok validation
+- Responsive card layout
+- Result count
+- Subtle card fade-in animation
+- Clear button and quick-pick searches
 
-The app uses plain HTML, CSS and JavaScript with the Wikimedia Commons API. It prevents the form's default reload, ignores blank searches, safely encodes search queries, checks `response.ok`, parses JSON, clears previous results, and renders new cards dynamically.
+## API
+Images are fetched from the Wikimedia Commons API. No API key is required.
+
+## Run locally
+Open `index.html` in a browser.
+
+## Deployment
+This project is intended to be deployed as a static site using GitHub Pages, Netlify, or Vercel.
+
+## Repository
+https://github.com/dhruvvsharma07/orbitfind
+
+## Live URL
+Add the deployed URL here after deployment.

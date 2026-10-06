@@ -3,49 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OrbitFind — Image Explorer</title>
+  <title>OrbitFind</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
-    <div class="brand">
-      <span class="brand-mark" aria-hidden="true">◉</span>
-      <div><h1>OrbitFind</h1><p>Explore the web visually, one topic at a time.</p></div>
-    </div>
-    <nav class="quick-picks" aria-label="Popular searches">
-      <span class="quick-label">Try:</span>
-      <button type="button" class="chip" data-query="Nature">Nature</button>
-      <button type="button" class="chip" data-query="Architecture">Architecture</button>
-      <button type="button" class="chip" data-query="Space">Space</button>
-      <button type="button" class="chip" data-query="Animals">Animals</button>
-    </nav>
+    <div class="brand"><span class="brand-mark">◉</span><span>OrbitFind</span></div>
+    <p class="tagline">Explore the visual universe.</p>
   </header>
-
-  <main class="page-content">
-    <section class="hero" aria-labelledby="hero-title">
-      <p class="eyebrow">VISUAL SEARCH LAB</p>
-      <h2 id="hero-title">Find a world worth looking at.</h2>
-      <p class="hero-copy">Enter a topic below and discover a wall of images from Wikimedia Commons.</p>
-
-      <form id="search-form" class="search-panel">
-        <label for="topic-input">What do you want to explore?</label>
+  <main class="container">
+    <section class="hero">
+      <p class="eyebrow">WIKIMEDIA IMAGE SEARCH</p>
+      <h1>Find something worth seeing.</h1>
+      <p class="intro">Search a topic and explore real images from Wikimedia Commons.</p>
+      <form id="search-form" class="search-form">
+        <label for="topic-input">Search topic</label>
         <div class="search-row">
-          <input id="topic-input" name="topic" type="search" placeholder="e.g. mountains, Tokyo, galaxies..." autocomplete="off">
+          <input id="topic-input" type="search" placeholder="Try: space, architecture, nature..." autocomplete="off">
           <button id="search-button" type="submit">Search</button>
-          <button id="clear-button" type="reset">Clear</button>
+          <button id="clear-button" type="button">Clear</button>
         </div>
       </form>
-      <p id="result-count" class="result-count" aria-live="polite">Showing 0 results</p>
+      <div class="quick-picks">
+        <span>Quick picks:</span>
+        <button class="chip" type="button" data-query="Nature">Nature</button>
+        <button class="chip" type="button" data-query="Architecture">Architecture</button>
+        <button class="chip" type="button" data-query="Space">Space</button>
+        <button class="chip" type="button" data-query="Animals">Animals</button>
+      </div>
     </section>
-
-    <section class="results-area" aria-labelledby="results-title">
-      <div class="section-heading"><h3 id="results-title">Your visual wall</h3><span class="status-dot" aria-hidden="true"></span></div>
-      <p id="empty-state" class="empty-state">Search to see results — your visual wall is waiting.</p>
-      <section id="results" class="results-grid" aria-label="Image search results"></section>
+    <section class="results-section" aria-live="polite">
+      <div class="results-heading">
+        <div><p class="section-label">RESULTS</p><p id="result-count">Showing 0 results</p></div>
+        <div id="status" class="status" role="status"></div>
+      </div>
+      <div id="empty-state" class="empty-state">
+        <p class="empty-icon">✦</p><h2>Nothing here yet.</h2><p>Type a topic above and start exploring.</p>
+      </div>
+      <div id="results" class="results-grid"></div>
     </section>
   </main>
-
-  <footer class="site-footer"><p>OrbitFind · Part 2 — Fetch &amp; Render</p></footer>
+  <footer class="site-footer"><p>OrbitFind · Built with HTML, CSS &amp; JavaScript</p></footer>
   <script src="script.js"></script>
 </body>
 </html>
